@@ -25,7 +25,7 @@ public class Cart implements CommandLineRunner {
 
         System.out.println("Sending cart data...");
 
-        template.convertAndSend("Shopping Cart", customer);
+        template.convertAndSend("Charging Queue", "{e-mail: asf@email.com\nCEP: 80471-962\nskus: [kjp12, mvn48, crz8s]\nCost:671.80}");
 
         System.out.println("Data sent.");
 

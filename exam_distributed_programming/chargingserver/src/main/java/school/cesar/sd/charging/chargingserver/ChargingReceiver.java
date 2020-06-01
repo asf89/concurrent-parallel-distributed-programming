@@ -9,8 +9,9 @@ public class ChargingReceiver {
 
     private static final Logger log = LoggerFactory.getLogger(ChargingReceiver.class);
 
-    public void chargingReceiveMessage(Customer customer) {
-        log.info("Charging info: {}", customer.toString());
+    public void chargingReceiveMessage(String customer) {
+        //log.info("Charging info: {}", customer.toString());
+        System.out.println(customer);
     }
     
 }
