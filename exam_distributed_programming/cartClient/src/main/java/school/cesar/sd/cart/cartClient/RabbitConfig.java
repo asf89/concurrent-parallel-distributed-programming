@@ -10,7 +10,7 @@ public class RabbitConfig {
 
     static final String fanoutExchangeName = "fanout-exchange";
 
-    static final String queueName = "Carrinho de compras";
+    static final String queueName = "Shopping Cart";
 
     @Bean
     Queue queue() {
