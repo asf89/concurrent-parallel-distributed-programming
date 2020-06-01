@@ -1,10 +1,11 @@
 package school.cesar.sd.cart.cartClient;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Customer {
+public class Customer implements Serializable {
 
     private String email;
     private String cep;
