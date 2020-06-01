@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitConfig {
 
     static final String fanoutExchangeName = "fanout-exchange";
-    static final String queueName = "Shopping Cart";
+    static final String queueName = "Charging Queue";
 
     @Bean
     Queue queue() {
