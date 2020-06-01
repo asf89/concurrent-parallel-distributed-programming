@@ -1,4 +1,4 @@
-package school.cesar.sd.cart.cartClient;
+package school.cesar.sd.charging.chargingserver;
 
 import java.io.Serializable;
 import java.util.ArrayList;
