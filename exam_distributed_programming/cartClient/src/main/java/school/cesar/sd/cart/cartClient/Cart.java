@@ -15,18 +15,20 @@ public class Cart implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-
+        /*
         ArrayList<String> skus = new ArrayList<String>();
         skus.add("kjp12");
         skus.add("mvn48");
         skus.add("crz8s");
+        */
+        String[] skus = {"kjp12", "mvn48", "crz8s"};
 
         Customer customer = new Customer("asf@email.com", "80471-962", skus, 671.80); 
 
         System.out.println("Sending cart data...");
 
-        template.convertAndSend("Charging Queue", "{e-mail: asf@email.com\nCEP: 80471-962\nskus: [kjp12, mvn48, crz8s]\nCost:671.80}");
-
+        //template.convertAndSend("Charging Queue", "{e-mail: asf@email.com\nCEP: 80471-962\nskus: [kjp12, mvn48, crz8s]\nCost:671.80}");
+        template.convertAndSend("Charging Queue", customer.toString());
         System.out.println("Data sent.");
 
     }
