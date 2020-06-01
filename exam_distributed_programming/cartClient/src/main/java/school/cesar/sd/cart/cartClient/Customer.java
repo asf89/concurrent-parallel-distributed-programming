@@ -11,7 +11,7 @@ public class Customer implements Serializable {
     private String cep;
     private ArrayList<String> skus;
     private double cost;
-
+    
     public String getEmail() {
         return this.email;
     }
@@ -38,15 +38,25 @@ public class Customer implements Serializable {
             this.skus.add(skusValue);
         }
     }
-    /*
+    
     public String getSkusToString() {
+        
         String result = "";
-        for (String skusValue: this.skus) {
-            result += skusValue;
+        int i = 0;
+        while (i <= (this.skus.size() - 1)) {
+
+            if (i == (this.skus.size() - 1)) {
+                result += this.skus.get(i);                
+            } else {
+                result += this.skus.get(i) + ", ";
+            }
+            
+            i++;
         }
+
         return result;
     }
-    */
+    
 
     public double getCost() {
         return this.cost;
@@ -78,7 +88,7 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "{e-mail: " + this.getEmail() + "\n" + "CEP: " + this.getCEP() + "\n" + "Skus: " + this.skus.toString() + "\n" + "Cost: " + this.getCost() + "}";
+        return "{e-mail: " + this.getEmail() + "\n" + "CEP: " + this.getCEP() + "\n" + "Skus: " + this.getSkusToString() + "\n" + "Cost: " + this.getCost() + "}";
     }
     
 }
