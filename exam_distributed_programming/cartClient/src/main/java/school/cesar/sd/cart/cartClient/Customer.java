@@ -65,20 +65,7 @@ public class Customer implements Serializable {
     public void setCost(double cost) {
         this.cost = cost;
     }
-    /*
-    public Customer(@JsonProperty("e-mail") String email
-                  , @JsonProperty("CEP") String cep
-                  , @JsonProperty("skus") ArrayList<String> skus
-                  , @JsonProperty("cost") double cost) {
-        
-        this.email = email;
-        this.cep = cep;
-        this.skus = skus;
-        this.cost = cost;
-
-    }
-    */
-
+    
     public Customer(String email, String cep, String[] skus, double cost) {
         this.setEmail(email);
         this.setCEP(cep);
