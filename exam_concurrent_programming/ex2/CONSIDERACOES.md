@@ -1,0 +1,3 @@
+Neste projeto, a classe Main utiliza de Busy-Wait para detectar a conclus�o. Quais as implica��es dessa implementa��o e quais as alternativas?
+
+R: Uma implicação seria que o processo não seria concluído ao acabar o tempo de espera, o que acarretaria em threads começarem a requisitar o processo sem este ter sido encerrado previamente na thread anterior. Além disso, pode consumir tempo de processador que poderia ser melhor empregado na execução de outros programas. Uma forma de contornar esse problema seria o uso de técnicas de suspensão de threads, como os métodos join() e a aplicação de mutex, para evitar essa condição de corrida.  
